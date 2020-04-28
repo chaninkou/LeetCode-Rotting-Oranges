@@ -41,6 +41,7 @@ public class FindMinMinuteToRotFunction {
 			return 0;
 		}
 
+		// For each minute, turn everything next to 2 to 2
 		while (!queue.isEmpty()) {
 			int size = queue.size();
 
@@ -70,7 +71,7 @@ public class FindMinMinuteToRotFunction {
 			}
 		}
 
-		// If there is still fresh orange, -1 means impossible to get rotten
+		// -1 means orange impossible to get rotten
 		return numberOfFresh == 0 ? totalMinute : -1;
 	}
 }
