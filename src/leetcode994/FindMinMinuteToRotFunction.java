@@ -22,9 +22,6 @@ public class FindMinMinuteToRotFunction {
 		// queue to keep track of each rotten orange for each minute
 		Queue<int[]> queue = new LinkedList<>();
 
-		// This is very smart way to go all four direction for one time
-		int[][] direction = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
-
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[0].length; j++) {
 				// Store all the position for rotten orange 
@@ -40,11 +37,15 @@ public class FindMinMinuteToRotFunction {
 		if (numberOfFresh == 0) {
 			return 0;
 		}
+		
+		// This is very smart way to go all four direction for one time
+		int[][] direction = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
 
 		// For each minute, turn everything next to 2 to 2
 		while (!queue.isEmpty()) {
 			int size = queue.size();
 
+			// Increase the minute by 1
 			totalMinute++;
 
 			for (int i = 0; i < size; i++) {
