@@ -19,12 +19,13 @@ public class FindMinMinuteToRotFunction {
 		// -1 since for first loop, we check for first minute
 		int totalMinute = -1;
 
-		// queue to keep track of each rotten orange for each minute
+		// Keep track of each rotten orange for each minute
 		Queue<int[]> queue = new LinkedList<>();
 
+		// Store all the position for rotten orange
+		// Keep track of how many fresh oranges
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[0].length; j++) {
-				// Store all the position for rotten orange 
 				if (grid[i][j] == 2) {
 					queue.offer(new int[] { i, j });
 				} else if (grid[i][j] == 1) {
