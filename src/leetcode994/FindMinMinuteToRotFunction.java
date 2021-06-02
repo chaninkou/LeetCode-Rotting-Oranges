@@ -5,7 +5,6 @@ import java.util.Queue;
 
 public class FindMinMinuteToRotFunction {
 	public int orangesRotting(int[][] grid) {
-		// Edge case
 		if (grid.length == 0 || grid == null) {
 			return 0;
 		}
