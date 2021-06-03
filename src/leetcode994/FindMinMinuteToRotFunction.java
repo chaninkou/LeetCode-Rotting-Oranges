@@ -24,7 +24,7 @@ public class FindMinMinuteToRotFunction {
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[0].length; j++) {
 				if (grid[i][j] == 2) {
-					queue.offer(new int[] { i, j }); // Store all the position for rotten orange
+					queue.offer(new int[] { i, j }); // Store all the position of rotten orange
 				} else if (grid[i][j] == 1) {
 					numberOfFresh++; // Keep track of how many fresh oranges
 				}
